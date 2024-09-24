@@ -47,7 +47,7 @@ export default function About() {
                     <h4>Team</h4>
                 </div>
                 <div>
-                    <Team members={ members }/>
+                    <Team members={ members } setMembers={ setMembers }/>
                 </div>
             </div>
            
