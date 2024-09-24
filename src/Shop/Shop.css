@@ -1,0 +1,81 @@
+.cont-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+}
+.btn-select {
+    background-color: black;
+    border-radius: 40px;
+    color: rgb(204, 202, 202);
+    padding: 20px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+    margin: 5px;
+}
+.product-image {
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+}
+.products-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid rgb(196, 196, 196);
+    margin-top: 20px;
+}
+.item-cont {
+    margin: 25px;
+}
+.bg-img-ad-cont {
+    margin-top: 50px;
+    background-image: url(https://images.unsplash.com/photo-1576426863848-c21f53c60b19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.adv-par {
+    font-family: "Noto Serif", serif;
+    font-size: 35px;
+    padding: 15px;
+    text-align: center;
+}
+.adv-countdown {
+    color: rgb(155, 2, 2);
+    font-size: 48px;
+    font-weight: 400;
+}
+
+
+@media all and (max-width: 900px) {
+    .bg-img-ad-cont {
+        height: 50vh;
+    }
+    .adv-par {
+        font-size: 30px;
+    }
+    .btn-select {
+        padding: 15px;
+        width: 100px;
+    }
+    .product-image {
+        width: 300px;
+        height: 350px;
+    }
+}
+@media all and (max-width: 650px) {
+    .adv-countdown {
+        font-size: 32px;
+    }
+    .product-image {
+        width: 220px;
+        height: 250px;
+    }
+}

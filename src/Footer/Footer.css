@@ -1,0 +1,29 @@
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-cont {
+    display: flex;
+}
+.box {
+    margin: 50px;
+}
+.box p {
+    color: rgb(80, 79, 79);
+}
+.title-footer {
+    font-size: 25px;
+    color: rgb(80, 79, 79);
+}
+
+@media all and (max-width: 700px) {
+    .footer-box {
+        margin-top: 40px;
+    }
+    .footer-cont {
+        flex-direction: column;
+    }
+    .box {
+        margin: 10px;
+    }
+}

@@ -1,38 +1,263 @@
-.App {
+body {
+  margin: 0;
+}
+.padding-box {
+  padding-left: 16%;
+  padding-right: 16%;
+}
+.space-top {
+  margin-top: 150px;
+} 
+nav {
+  display: flex;
+  margin-top: 25px;
+}
+.linkNav {
+  margin: 30px;
+  text-decoration: none;
+  color: rgb(90, 90, 90);
+  font-family: "Roboto", sans-serif;
+}
+.title-link {
+  font-family: "Noto Serif", serif;
+  font-size: 25px;
+}
+.link-left {
+  margin-left: auto;
+}
+
+h2, h4, h5 {
+  font-family: "Noto Serif", serif;
+  font-weight: 300;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 109px;
+}
+h4 {
+  font-size: 35px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cont-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.cont-par-header {
+  width: 360px;
+  margin-top: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.img-header-cont {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369983.367121-BPBIBHEOPXXSGCLDRWPA/imgg-od3-_iybzjt1.png?format=2500w);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  position:absolute;
+  top: 100px;
+  right: 20%;
+  width: 630px;
+  height: 85%;
+  z-index: -1;
+  margin-top: 50px;
+  opacity: 0.5;
+}
+.btn-link {
+  background-color: black;
+  padding: 30px;
+  width: 250px;
+  border-radius: 40px;
+  margin-top: 20px;
+}
+.link-in-btn {
+  color: rgb(204, 202, 202);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.cont-products {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.product-image-main {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit:cover;
+  
+}
+.product-name{
+  color: black;
+  font-size: 20px;
+}
+
+.dark-bg {
+  background-color: #dcdcdcd0;
+  margin-top: 50px;
+}
+
+.img-services {
+  width: 680px;
+  height: 800px;
+  object-fit:cover;
+  padding: 30px;
+}
+
+.cont-services-main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.par-services {
+  font-size: 50px;
+  text-align: start;
+  margin-bottom: 10px;
+}
+.promotion-reasons {
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.par-ad {
+  width: 330px;
+  margin-bottom: 80px;
+}
+.image-ad {
+  margin-top: 30px;
+  width: 530px;
+}
+.image-ad-second {
+  width: 400px;
+  height: 650px;
+  object-fit:cover;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 1600px) {
+  h2 {
+    font-size: 103px;
   }
-  to {
-    transform: rotate(360deg);
+  .cont-par-header {
+    margin-top: 200px;
+
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .padding-box {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  h2 {
+    font-size: 95px;
+  }
+  .img-header-cont {
+    top: 100px;
+    right: 10%;
+    width: 530px;
+  }
+  .img-services {
+    width: 420px;
+    height: 600px;
+  }
+  .par-services {
+    font-size: 38px;
+  }
+  .promotion-reasons {
+    font-size: 18px;
+  }
+  .image-ad-second {
+    width: 200px;
+    height: 420px;
+  }
+  .image-ad {
+    width: 450px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .padding-box {
+    padding: 0;
+  }
+  .cont-par-header {
+    margin-left: 10%;
+  }
+  .img-header-cont {
+    top: 100px;
+    right: 0;
+    width: 520px;
+  }
+  .space-top {
+    margin-top: 0;
+  }
+  .product-image-main {
+    width: 250px;
+    height: 250px;
+  }
+  .img-services {
+    width: 85%;
+    height: 80%;
+  }
+  .par-services {
+    font-size: 25px;
+  }
+  .promotion-reasons {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .btn-link {
+    width: 200px;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .image-ad-second {
+    display: none;
+  }
+
+}
+
+@media all and (max-width: 600px) {
+  .title-link {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  h2 {
+    margin-top: 100px;
+    font-size: 80px;
+  }
+  .img-header-cont {
+    top: 100px;
+    right: 0;
+    width: 300px;
+    height: 80vh;
+    right: 2%;
+  }
+
+  .btn-link {
+    padding: 20px;
+    width: 200px;
+  }
+  .mobile-column {
+    flex-direction: column;
+    align-items: center;
+  }
+  .par-services {
+    margin-top: 5px;
+  }
+  .image-ad {
+    width: 300px;
   }
 }

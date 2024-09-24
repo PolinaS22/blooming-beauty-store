@@ -1,0 +1,35 @@
+.accordion {
+    margin-bottom: 10px;
+    border: 2px solid rgb(100, 100, 100);
+
+}
+.active {
+    padding: 10px 30px;
+    border-bottom: 2px solid rgb(139, 128, 111);
+    cursor: pointer;
+    background-color: #bebebed0;
+    font-family: "Noto Serif", serif;
+    font-size: 19px;
+
+}
+.answer {
+    background-color: #cccacad0;
+    padding: 10px 30px;
+    font-size: 17px;
+}
+    
+.default {
+    padding: 10px 30px;
+    border: 1px solid rgba(112, 112, 112, 0.849);
+    cursor: pointer;
+    background-color: #f5f3f3d0;
+    font-size: 19px;
+    font-family: "Noto Serif", serif;
+
+}
+    
+.content {
+    padding: 50px 30px;
+}
+
+

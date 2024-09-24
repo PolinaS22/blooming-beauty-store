@@ -1,0 +1,149 @@
+.box-bg-img-about {
+    background-image: url(https://images.unsplash.com/photo-1531646317777-0619c7c5d1d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.image-about-us {
+    width: 380px;
+    height: 550px;
+    object-fit:cover;
+    padding: 30px;
+}
+.about-us-cont {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.cont-par-about {
+    width: 380px;
+    font-size: 18px;
+}
+.title-about-section {
+    font-size: 50px;
+    text-align: start;
+}
+.imgMission {
+    width: 850px;
+    height: 500px;
+    object-fit: cover;
+    background-color: #e9e8e84f;
+    padding: 30px;
+}
+.cont-mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.value-box {
+    width: 600px;
+    text-align: center;
+}
+.value {
+    font-size: 29px;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+}
+.value-description {
+    font-size: 20px;
+}
+.btn-value {
+    background-color: rgba(32, 32, 32, 0.952);
+    padding: 15px;
+    width: 120px;
+    margin: 20px;
+    border-radius: 40px;
+    color: rgb(228, 226, 226);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin-top: 40px;
+}
+.team-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid #dcdcdcd0;
+}
+.team-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    
+}
+.team-member {
+    margin: 20px;
+    text-align: center;
+}
+.btn-showMore {
+    background-color: transparent;
+    color: rgb(3, 3, 170);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.box-color {
+    background-color: #dcdcdcd0;
+    padding-bottom: 80px;
+    padding-top: 10px;
+}
+
+@media all and (max-width: 900px) {
+    .image-about-us {
+        width: 280px;
+        height: 420px;
+    }
+    .imgMission {
+        width: 80%;
+        height: 100%;
+    }
+    .team-image {
+        width: 250px;
+        height: 250px;
+    }
+    .value {
+        font-size: 25px;
+    }
+    .value-description {
+        font-size: 16px;
+    }
+    .btn-value {
+        background-color: rgba(32, 32, 32, 0.952);
+        padding: 15px;
+        width: 100px;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+}
+@media all and (max-width: 750px) {
+   .about-us-cont {
+    flex-direction: column;
+    align-items: center;
+   }
+   .image-about-us {
+    width: 420px;
+    height: 420px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .image-about-us {
+        width: 380px;
+        height: 380px;
+        padding: 0;
+    }
+    .btn-value {
+        padding: 5px;
+        width: 80px;
+        margin: 10px;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+}
