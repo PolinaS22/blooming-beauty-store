@@ -26,21 +26,21 @@ export default function Main() {
                 </div>
                 <div className="cont-products">
                     <div className="product-card">
-                        <Link to='/shop'>
+                        <Link className="link-underline" to='/shop'>
                             <img className="product-image-main" alt='product' src="https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369983.717766-NWWXLNCJYSCPQKBEYROD/imgg-od3-a_h_720q.png?format=2500w"/> 
                             <p className="product-name">Pout Parade</p>         
                         </Link>
                         <p>$25</p>
                     </div>
                     <div>
-                         <Link to='/shop'>
+                         <Link className="link-underline" to='/shop'>
                             <img className="product-image-main" alt='product' src="https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369983.984915-NKGAKGBCEGSRIQPTWSNI/imgg-od3-xhcj3iq8.png?format=2500w"/> 
                             <p className="product-name">Autumn Glow Palette</p>
                         </Link>
                         <p>$40</p>
                     </div>
                     <div>
-                        <Link to='/shop'>
+                        <Link className="link-underline" to='/shop'>
                             <img className="product-image-main" alt='product' src="https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369984.063375-DGKVWBCHEMRJXWKRXCEC/imgg-od3-7_jkrr_4.png?format=2500w"/> 
                             <p className="product-name">Nail Bliss Buffers</p>
                         </Link>
