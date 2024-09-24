@@ -43,7 +43,7 @@ export default function About() {
             </div>
 
             <div>
-                <div>
+                <div> 
                     <h4>Team</h4>
                 </div>
                 <div>
