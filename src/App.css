@@ -234,8 +234,11 @@ p {
 
 @media all and (max-width: 600px) {
   .title-link {
-    margin-left: 10px;
+    margin: 10px;
     font-size: 20px;
+  }
+  .linkNav {
+    margin: 10px;
   }
   h2 {
     margin-top: 100px;

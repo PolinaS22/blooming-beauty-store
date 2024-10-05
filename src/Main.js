@@ -27,7 +27,7 @@ export default function Main() {
                 <div className="cont-products">
                     <div className="product-card">
                         <Link className="link-underline" to='/shop'>
-                            <img className="product-image-main" alt='product' src="https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369983.717766-NWWXLNCJYSCPQKBEYROD/imgg-od3-a_h_720q.png?format=2500w"/> 
+                           <img className="product-image-main" alt='product' src="https://images.squarespace-cdn.com/content/v1/66ec1accb984c3039f8efd32/1722369983.717766-NWWXLNCJYSCPQKBEYROD/imgg-od3-a_h_720q.png?format=2500w"/> 
                             <p className="product-name">Pout Parade</p>         
                         </Link>
                         <p>$25</p>

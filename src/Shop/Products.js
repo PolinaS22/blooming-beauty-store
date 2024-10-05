@@ -1,16 +1,24 @@
-export default function Products({ products }) {
+import { useSelector } from "react-redux";
+import { dataProducts } from "./dataProducts";
+import Item from "./Item";
+import { getSelectedCategory } from "../ReduxComponents/Redux/productsSlice";
+
+export default function Products() {
+
+  const selectedCategory = useSelector(getSelectedCategory)
+
     return (
         <div className="products-cont padding-box">
-            {products.map((product => {
-                const { id, title, price, image } = product;
-                return (
-                    <div className="item-cont" key={ id }>
-                        <img className="product-image" src={ image } alt='product'/>
-                        <p>{ title }</p>
-                        <p>$ { price }</p>
-                    </div>
-                )
-            }))}
+
+            {dataProducts
+            .filter(item => {
+                if (selectedCategory === 'ALL') return true
+                return selectedCategory === item.category;
+            })
+            .map((item, i) => {
+                return <Item key={i} id={item.id} title={item.title} image={item.image} price={item.price} description={item.description}/>
+            })}
+
         </div>
     )
 }

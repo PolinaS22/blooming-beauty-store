@@ -13,6 +13,7 @@
     width: 120px;
     cursor: pointer;
     margin: 5px;
+    font-family: "Noto Serif", serif;
 }
 .product-image {
     width: 450px;
@@ -53,6 +54,49 @@
     font-weight: 400;
 }
 
+.product-cont {
+    display: flex;
+    margin-top: 30px;
+
+}
+.img-product-individual-page {
+    width: 650px;
+    background-color: #dcdcdcd0;
+    padding: 20px;
+    margin: 30px;
+}
+.path-user {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.product-title {
+    font-size: 35px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+.product-price {
+    font-size: 22px;
+}
+.description-cont-ind-product{
+    border: 2px solid #aaaaaad0;
+    padding: 20px;
+    margin: 10px 30px;
+}
+.description-title {
+    text-align: start;
+    font-size: 27px;
+    margin: 0;
+}
+
+@media all and (max-width: 1200px) {
+    .img-product-individual-page {
+        width: 450px;
+    }
+    .description-cont-ind-product{
+        margin: 30px;
+    }
+}
 
 @media all and (max-width: 900px) {
     .bg-img-ad-cont {
@@ -69,13 +113,52 @@
         width: 300px;
         height: 350px;
     }
+    .product-cont {
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .product-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .product-price {
+        font-size: 18px;
+        text-align: center;
+
+    }
+    .description-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
 }
-@media all and (max-width: 650px) {
+
+@media all and (max-width: 750px) {
     .adv-countdown {
         font-size: 32px;
     }
     .product-image {
-        width: 220px;
-        height: 250px;
+        width: 280px;
+        height: 300px;
+    }
+    .product-display-left {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .img-product-individual-page {
+        margin: 0;
+        width: 460px;
+    }
+    .path-user {
+        margin-left: 5px;
     }
 }
+
+@media all and (max-width: 750px) {
+    .img-product-individual-page {
+        width: 380px;
+    }
+ }
