@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
 import { dataProducts } from "./dataProducts";
 import Item from "./Item";
-import { getSelectedCategory } from "../ReduxComponents/Redux/productsSlice";
 
-export default function Products() {
-  const selectedCategory = useSelector(getSelectedCategory)
-  
+export default function Products({selectedCategory}) {
+
     return (
         <div className="products-cont padding-box">
             {
@@ -25,5 +22,6 @@ export default function Products() {
             })            
             }
         </div>
+
     )
 }

@@ -1,14 +1,12 @@
 import { useSelector } from "react-redux"
-import { getCartItems, getTotalPrice } from "../../Redux/cartSlice"
+import { getCartItems } from "../../Redux/cartSlice"
 import { CartItem } from "./CartItem";
 import { Link } from "react-router-dom";
 import "./cart.css"
 import InputSale from "./InputSale";
 
 export default function Cart() {
-   const cartItems = useSelector(getCartItems);
-   const totalPrice = useSelector(getTotalPrice);
-    
+   const cartItems = useSelector(getCartItems);    
    const cartQuantity = cartItems.length;
 
    if (cartQuantity === 0) {
@@ -50,7 +48,7 @@ export default function Cart() {
             </div>
                         
             <div>
-                <InputSale totalPrice={totalPrice}/>
+                <InputSale/>
             </div>           
      
         </div>

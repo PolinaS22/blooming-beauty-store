@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
-import { applyDiscount, getDiscountCode, getDiscountPersent } from "../../Redux/cartSlice";
+import { applyDiscount, getDiscountCode, getDiscountPersent, getTotalPrice } from "../../Redux/cartSlice";
 
 
 
-export default function InputSale({totalPrice}) {
+export default function InputSale() {
+
+    const totalPrice = useSelector(getTotalPrice);
 
     const dispatch = useDispatch();
     const discountCode = useSelector(getDiscountCode);
@@ -14,17 +16,18 @@ export default function InputSale({totalPrice}) {
     const [inputDiscount, setInputDiscount] = useState('');
     const [discountAmount, setDiscountAmount] = useState(0);
 
+
+
     const formSubmit = (e) => {
         e.preventDefault();
     } 
 
     const handleApplyDiscount = () => {
         if (inputDiscount === discountCode && totalPrice >= 500) {
-            dispatch(applyDiscount({ code: inputDiscount, percent: discountPercent }));
+            dispatch(applyDiscount({ code: inputDiscount, percent: 15 }));
 
             const discount = totalPrice * ( discountPercent / 100 );
             setDiscountAmount(discount);
-
 
             Swal.fire({
                 title: "Sweet!",
@@ -55,7 +58,7 @@ export default function InputSale({totalPrice}) {
                 <form onSubmit={formSubmit}>
                     <input type="text" 
                         placeholder="Enter your discount code" 
-                        value={ inputDiscount}  
+                        value={ inputDiscount }  
                         onChange={(e) => setInputDiscount(e.target.value)}
                     />
 
@@ -76,7 +79,9 @@ export default function InputSale({totalPrice}) {
                     )}
                         
                     <div className="cart-items-amount-cont">
-                        <p className="cart-total-price">Total Price: $ { totalPrice.toFixed(2) }</p>
+                        <p className="cart-total-price">Total Price: $
+                            { totalPrice.toFixed(2)}
+                        </p>
                     </div>
                     
                 </div>

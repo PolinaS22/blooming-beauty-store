@@ -6,7 +6,7 @@ export const cartSlice = createSlice({
     cartItems: [],
 
     discountCode: 'GLOWUP24',
-    discountPercent: 15
+    discountPercent: 0
   },
 
   reducers: {
@@ -44,22 +44,18 @@ export const cartSlice = createSlice({
       state.discountCode = action.payload.code 
       state.discountPercent = action.payload.percent
     },
-    clearDiscount: (state) => {
-      state.discountCode = null;
-      state.discountPercent = 0;
-    }
  
   },
 })
 
 export const getTotalPrice = state => {
-  const totalWithoutSiscount = state.cart.cartItems.reduce (
+  const totalWithoutDiscount = state.cart.cartItems.reduce (
     (total, cartItems) => 
     cartItems.totalPrice + total, 0);
 
-  const discount = totalWithoutSiscount * (state.cart.discountPercent / 100);
+  const discount = totalWithoutDiscount * (state.cart.discountPercent / 100);
 
-  return totalWithoutSiscount - discount;
+  return totalWithoutDiscount - discount;
 }
 
 export const getDiscountCode = state => state.cart.discountCode;
@@ -73,7 +69,6 @@ export const {
   increaseQuantity, 
   decreaseQuantity,
   applyDiscount,
-  clearDiscount
 } = cartSlice.actions;
 
 export const cartReducer = cartSlice.reducer;
