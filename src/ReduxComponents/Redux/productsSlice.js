@@ -11,7 +11,7 @@ export const itemSlice = createSlice({
         },
       },
     })
-  
-export const getSelectedCategory = state => state.items.selectedCategory
-export const { filterCategory } = itemSlice.actions
-export default itemSlice.reducer
+
+export const getSelectedCategory = state => state.items.selectedCategory;
+export const { filterCategory } = itemSlice.actions;
+export default itemSlice.reducer;

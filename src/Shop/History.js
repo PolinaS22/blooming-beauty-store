@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 export const History = ({title}) => {
-
-
     return (
         <div className="path-user">
             <Link to='/' style={{ textDecoration: 'none', color:'rgb(90, 100, 90)', margin: '5px' }}>

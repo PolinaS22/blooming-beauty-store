@@ -30,8 +30,7 @@ export default function Advertisement() {
     return (
         <div className="bg-img-ad-cont">
             <p className="adv-par">Last chance to save with out limited-time sale! Ends in:</p>
-            <p className="adv-countdown">{`${hours}h ${minutes}m ${seconds}s`}</p>
-                
+            <p className="adv-countdown">{`${hours}h ${minutes}m ${seconds}s`}</p>              
         </div>
     )
 }

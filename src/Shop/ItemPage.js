@@ -2,10 +2,10 @@ import { useContext, useState } from "react"
 import { ShopContext } from "../Context/ShopContext"
 import { useParams } from "react-router-dom"
 import { History } from "./History"
-// import { AddToCart } from "../ReduxComponents/Cart/Cart/AddToCart"
 import { ChangeQuantity } from "../ReduxComponents/Cart/Cart/ChangeQuantity"
 import { useDispatch } from "react-redux"
 import { addItemToCart } from "../ReduxComponents/Redux/cartSlice"
+import Discount from "../ReduxComponents/Cart/Cart/Discount"
 
 export default function ItemPage(props) {
    const dispatch = useDispatch();
@@ -16,8 +16,15 @@ export default function ItemPage(props) {
 
    const [quantity, setQuantity] = useState(1);
    
+   const [isAdded, setIsAdded] = useState(false)
+
+   const handleAddToCart = ({product, quantity}) => {
+    dispatch(addItemToCart({product, quantity}))
+    setIsAdded(true)
+   }
 
     return (
+        <div>
         <div className="padding-box">
             <History title = {product.title}/>
             <div>
@@ -30,33 +37,25 @@ export default function ItemPage(props) {
                                 <h4 className="product-title">{product.title}</h4>
                                 <p className="product-price">$ {product.price}</p>
                             </div>   
-                                <div>
-                                    {/* FIX */}
-                                   
+                                <div>                                 
                                     <ChangeQuantity quantity={quantity} setQuantity={setQuantity} />
                                 </div>
 
-                                <div>
-                                    {/* Если я оборачиваю ({product, quantity}) вот так, то в файле cartItem title - undefined*/}
-                                <button onClick={() => dispatch(addItemToCart(product, quantity))}>         
-                                    Add To Cart
-                                </button>
+                                <div className="cont-add-btn">
+                                    <button className="add-to-cart-btn" onClick={() => handleAddToCart({product, quantity})}>         
+                                        { isAdded ? 'Added' : 'Add to Cart'  }
+                                    </button>
                                 </div>
-                                
-
-                           
-                            </div>
-                            
-                    
+                            </div>       
                 </div>
 
                 <div className="description-cont-ind-product">
                     <h5 className="description-title">Description:</h5>
                     <p>{product.description}</p>                        
                 </div>
-            </div>
-            
-                    
+            </div>            
+        </div>
+         <Discount/>          
         </div>
 
     )

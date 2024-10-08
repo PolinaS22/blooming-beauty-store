@@ -7,9 +7,13 @@ import Footer from './Footer/Footer';
 import About from './About/About';
 import ItemPage from './Shop/ItemPage';
 import Cart from './ReduxComponents/Cart/Cart/Cart';
+import { useSelector } from 'react-redux';
+import { getCartItems } from './ReduxComponents/Redux/cartSlice';
 
 
 function App() {
+  const cartItems = useSelector(getCartItems);     
+
   return (
     <div>
         <div className="Navbar">
@@ -21,7 +25,7 @@ function App() {
             <div className='link-left'>
               <Link to='/shop' className='linkNav'>Shop</Link>
               <Link to='/about' className='linkNav'>About</Link>
-              <Link to='/cart' className='linkNav'>Cart </Link>
+              <Link to='/cart' className='linkNav'>Cart ({cartItems.length})</Link>
             </div>                  
           </nav>
 

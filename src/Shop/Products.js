@@ -4,21 +4,26 @@ import Item from "./Item";
 import { getSelectedCategory } from "../ReduxComponents/Redux/productsSlice";
 
 export default function Products() {
-
   const selectedCategory = useSelector(getSelectedCategory)
-
+  
     return (
         <div className="products-cont padding-box">
-
-            {dataProducts
+            {
+             dataProducts
             .filter(item => {
-                if (selectedCategory === 'ALL') return true
-                return selectedCategory === item.category;
+                const categoryMatch = selectedCategory === 'ALL' || item.category.includes(selectedCategory);
+                return categoryMatch;             
             })
-            .map((item, i) => {
-                return <Item key={i} id={item.id} title={item.title} image={item.image} price={item.price} description={item.description}/>
-            })}
-
+            .map(item => {
+                return <Item 
+                key={item.id} 
+                id={item.id} 
+                title={item.title} 
+                image={item.image} 
+                price={item.price} 
+                description={item.description}/>
+            })            
+            }
         </div>
     )
 }

@@ -1,7 +1,4 @@
-
-export const  ChangeQuantity = ({quantity, setQuantity}) => {
-
-    
+export const  ChangeQuantity = ({quantity, setQuantity}) => { 
     const handleIncrement = () => {
         const newAmount = quantity + 1;
         setQuantity(newAmount)
@@ -15,10 +12,10 @@ export const  ChangeQuantity = ({quantity, setQuantity}) => {
 
 
     return (
-        <div>
-            <button onClick={() => handleDecrement()}>-</button>
-            <span> {quantity} </span>
-            <button onClick={() => handleIncrement()}>+</button>
+        <div className="quantity-control">
+            <button className="quantity-btn" onClick={() => handleDecrement()}>-</button>
+            <span className="quantity-input"> {quantity} </span>
+            <button className="quantity-btn" onClick={() => handleIncrement()}>+</button>
 
         </div>
     )
