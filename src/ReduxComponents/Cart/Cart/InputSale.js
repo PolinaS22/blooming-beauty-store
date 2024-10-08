@@ -42,7 +42,7 @@ export default function InputSale() {
         else {
             Swal.fire({
                 title: "Error :(",
-                text: "Invalid discoun code or your Glow Up Cart is under $500.",
+                text: "Invalid discount code or your Glow Up Cart is under $500.",
                 imageUrl: "https://images.unsplash.com/photo-1662453619322-5192d2708b35?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imageWidth: 400,
                 imageHeight: 200,
