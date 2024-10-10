@@ -1,8 +1,7 @@
 import { dataAbout } from "./dataAbout";
 import { useState } from "react";
 
-export default function Sliders() {
-   
+export default function Sliders() {   
     const [mission, setMission] = useState(0);
     const {image, value, description} = dataAbout[mission];
     const [showText, setShowText] = useState(false)
@@ -27,32 +26,24 @@ export default function Sliders() {
         }))
     }
 
-
-
     return (
         <div>
-            <div>
-                <h4>Company Mission & Value </h4>
-            </div>
+            <h4>Company Mission & Value </h4>
             <div className="cont-center">
                 <img className="imgMission" src={ image } alt='Company Mission'/>
             </div>
             <div className="cont-mission">
-                <div>
-                    <button className="btn-value" onClick={previousMission}>previous</button>                 
-                </div>
+                <button className="btn-value" onClick={ previousMission }>previous</button>                 
                 <div className="value-box">
                     <p className="value">{ value }</p>
                     <p className="value-description">
                         { showText ? description : description.substring(0, 100) + '...' }
                         <button className="btn-showMore" onClick={() => setShowText(!showText)}>
-                            { showText ? 'Show less' : 'Show more' }
+                        { showText ? 'Show less' : 'Show more' }
                         </button>
-                    </p> 
-                </div>       
-                <div>
-                    <button className="btn-value" onClick={nextMission}>next</button>
+                    </p>
                 </div>
+                <button className="btn-value" onClick={ nextMission }>next</button>
             </div>
         </div>
     )

@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { applyDiscount, getDiscountCode, getDiscountPersent, getTotalPrice } from "../../Redux/cartSlice";
 
-
-
 export default function InputSale() {
-
     const totalPrice = useSelector(getTotalPrice);
 
     const dispatch = useDispatch();
@@ -15,8 +12,6 @@ export default function InputSale() {
 
     const [inputDiscount, setInputDiscount] = useState('');
     const [discountAmount, setDiscountAmount] = useState(0);
-
-
 
     const formSubmit = (e) => {
         e.preventDefault();
@@ -55,37 +50,27 @@ export default function InputSale() {
     return (
         <div className="cont-check-out">
             <div>
-                <form onSubmit={formSubmit}>
+                <form onSubmit={ formSubmit }>
                     <input type="text" 
                         placeholder="Enter your discount code" 
                         value={ inputDiscount }  
                         onChange={(e) => setInputDiscount(e.target.value)}
                     />
-
                     <button 
                     className="apply-btn"
                     type="submit"
-                    onClick={ handleApplyDiscount }
-                    >
+                    onClick={ handleApplyDiscount }>
                         Apply
                     </button>   
-                </form>
-
-                <div>       
+                </form>       
                     { discountCode && (
-                        <div>
-                            <p>Discount Amount: - ${ discountAmount.toFixed(2) }</p>
-                        </div>
-                    )}
-                        
+                        <p>Discount Amount: - ${ discountAmount.toFixed(2) }</p>
+                    )}             
                     <div className="cart-items-amount-cont">
                         <p className="cart-total-price">Total Price: $
-                            { totalPrice.toFixed(2)}
+                            { totalPrice.toFixed(2) }
                         </p>
-                    </div>
-                    
-                </div>
-            
+                    </div>            
             </div>
         </div>
     )

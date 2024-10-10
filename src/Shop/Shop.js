@@ -9,7 +9,7 @@ import { getSelectedCategory } from '../ReduxComponents/Redux/productsSlice';
 import LoaderPage from '../Loader/LoaderPage';
 
 export default function Shop() {
-    const selectedCategory = useSelector(getSelectedCategory)
+  const selectedCategory = useSelector(getSelectedCategory)
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -18,16 +18,14 @@ export default function Shop() {
      .filter(item => selectedCategory ==='ALL' || item.category.includes(selectedCategory))
      .map(item => item.image);
 
-
      const loadImages = async () => {
         const imagePromise = imagesToLoad.map(src => {
-
-            return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = src;
-                img.onload = resolve;
-                img.onerror = reject;
-            });
+          return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = src;
+              img.onload = resolve;
+              img.onerror = reject;
+          });
         });
 
         try {
@@ -46,7 +44,6 @@ export default function Shop() {
     return <LoaderPage/>
   }
 
-  
     return (
         <div>
             <Advertisement/>

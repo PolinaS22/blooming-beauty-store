@@ -2,7 +2,6 @@ import { dataProducts } from "./dataProducts";
 import Item from "./Item";
 
 export default function Products({selectedCategory}) {
-
     return (
         <div className="products-cont padding-box">
             {

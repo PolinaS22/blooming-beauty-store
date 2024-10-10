@@ -16,7 +16,6 @@ export const  ChangeQuantity = ({quantity, setQuantity}) => {
             <button className="quantity-btn" onClick={() => handleDecrement()}>-</button>
             <span className="quantity-input"> {quantity} </span>
             <button className="quantity-btn" onClick={() => handleIncrement()}>+</button>
-
         </div>
     )
 }

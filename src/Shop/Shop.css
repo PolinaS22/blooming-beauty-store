@@ -11,7 +11,6 @@
     padding: 20px;
     font-size: 15px;
     width: 125px;
-    cursor: pointer;
     margin: 5px;
     font-family: "Noto Serif", serif;
 }
@@ -115,7 +114,6 @@
     font-size: 18px;
     width: 30px;
     height: 30px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +137,6 @@
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
     transition: background-color 0.3s;
     font-family: "Roboto", sans-serif;
 }

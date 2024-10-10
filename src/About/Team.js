@@ -5,13 +5,9 @@ export default function Team({ members }) {
                 const {id, image, name, position} = person;
                 return (
                     <div className="team-member" key={ id }>
-                        <div>
-                            <img className="team-image" src={ image } alt='team' width='50px'/>
-                        </div>
-                        <div>
-                            <p><b>{ name }</b></p>
-                            <p>{ position }</p>
-                        </div>
+                        <img className="team-image" src={ image } alt='team' width='50px'/>
+                        <p><b>{ name }</b></p>
+                        <p>{ position }</p>
                     </div>
                 )
             }))}

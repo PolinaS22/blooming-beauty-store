@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 export const ElementAccordion = ({ question, answer }) => {
-
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {

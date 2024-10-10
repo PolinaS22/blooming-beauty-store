@@ -16,12 +16,8 @@ export default function Cart() {
                 <h4>Glow Up Cart</h4>
             </div>
             <div className="bg-image-container box-bg-img-cart">
-                <div>
-                    <p className="cart-total-items">Your cart is empty :( </p>
-                </div>
-                <div>
-                    <button className="btn-link"><Link to='/shop' className="link-in-btn">View Shop</Link></button>
-                </div>
+                <p className="cart-total-items">Your cart is empty :( </p>
+                <button className="btn-link"><Link to='/shop' className="link-in-btn">View Shop</Link></button>
             </div>
         </div>
     );
@@ -29,28 +25,20 @@ export default function Cart() {
 
     return (
         <div className="padding-box">
-            <div>
-               <h4>Glow Up Cart</h4> 
-            </div>
+            <h4>Glow Up Cart</h4>
             <div className="cart-items-amout-cont">
                 <p className="cart-total-items"><i> Glow Up Products: { cartQuantity } </i></p>
             </div>
-
-            <div>
-                {
+            {
                 cartItems.map(
                     cartItem => 
                         <CartItem 
-                            key={cartItem.itemId} 
-                            cartItem={cartItem}
-                        />)
-                }
-            </div>
-                        
-            <div>
-                <InputSale/>
-            </div>           
-     
-        </div>
+                        key={cartItem.itemId} 
+                        cartItem={cartItem}
+                        />
+                )
+            }
+            <InputSale/>
+     </div>
     )
 }

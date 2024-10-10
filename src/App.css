@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+button {
+  cursor: pointer;
+}
 .padding-box {
   padding-left: 16%;
   padding-right: 16%;
@@ -251,7 +254,9 @@ p {
     height: 80vh;
     right: 2%;
   }
-
+  .cont-par-header {
+    margin-top: 130px;
+  }
   .btn-link {
     padding: 20px;
     width: 200px;
@@ -264,6 +269,15 @@ p {
     margin-top: 5px;
   }
   .image-ad {
-    width: 300px;
+    width: 100%;
+  }
+  .learn-more-btn {
+    margin-top: 0;
+  }
+  .par-ad {
+    margin-bottom: 40px;
+  }
+  .container-ad {
+    margin-left: 10%;
   }
 }
